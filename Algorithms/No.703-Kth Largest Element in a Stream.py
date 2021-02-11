@@ -33,9 +33,6 @@ No.703：Kth Largest Element in a Stream
     最多调用 add 方法 104 次
     题目数据保证，在查找第 k 大元素时，数组中至少有 k 个元素
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/kth-largest-element-in-a-stream
-
 解题思路：
 
     暴力解法：
@@ -55,6 +52,8 @@ No.703：Kth Largest Element in a Stream
         如果此时堆中的元素超过了 K，那么需要把堆中的最小元素（堆顶） pop() 出来。
         3.此时堆中的最小元素（堆顶）就是整个数据流中的第 K 大元素。
 
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/kth-largest-element-in-a-stream
 """
 
 import heapq
