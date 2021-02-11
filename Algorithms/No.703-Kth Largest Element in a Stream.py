@@ -68,6 +68,7 @@ class KthLargest(object):
         """
         self.k = k
         self.que = nums
+        # 排序
         heapq.heapify(self.que)
 
     def add(self, val):
