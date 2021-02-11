@@ -23,9 +23,6 @@ No.567：字符串的排列
     输入的字符串只包含小写字母
     两个字符串的长度都在 [1,10000] 之间
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/permutation-in-string
-
 解题思路：
 
     分析：
@@ -38,6 +35,9 @@ No.567：字符串的排列
     在窗口每次右移的时候，需要把右边新加入窗口的字符个数在 counter2 中加 1，把左边移出窗口的字符的个数减 1。
     如果 counter1 == counter2 ，那么说明窗口内的子串是 s1 的一个排列，返回 True
     如果窗口已经把 s2 遍历完了仍然没有找到满足条件的排列，返回 False
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/permutation-in-string
 
 """
 
