@@ -1,5 +1,5 @@
 """
-No.119：Pascal's Triangle II
+No.119：杨辉三角 II
 难度：简单
 
 问题描述：
