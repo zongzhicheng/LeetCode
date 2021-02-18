@@ -9,14 +9,14 @@ No.567：字符串的排列
 
 示例 1:
 
-    输入: s1 = "ab" s2 = "eidbaooo"
-    输出: True
-    解释: s2 包含 s1 的排列之一 ("ba").
+    输入：s1 = "ab" s2 = "eidbaooo"
+    输出：True
+    解释：s2 包含 s1 的排列之一 ("ba").
  
-示例 2:
+示例 2：
 
-    输入: s1= "ab" s2 = "eidboaoo"
-    输出: False
+    输入：s1= "ab" s2 = "eidboaoo"
+    输出：False
  
 注意：
 
