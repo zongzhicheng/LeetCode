@@ -48,6 +48,11 @@ No.1004：最大连续1的个数 III
 
 
 def longestOnes(A, K):
+    """
+    :type A: List[int]
+    :type K: int
+    :rtype: int
+    """
     N = len(A)
     res = 0
     left, right = 0, 0
