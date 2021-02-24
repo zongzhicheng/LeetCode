@@ -33,6 +33,11 @@ No.832：翻转图像
     1 <= A.length = A[0].length <= 20
     0 <= A[i][j] <= 1
 
+解题思路：
+
+    方法一：先翻转每行，再把0→1，1→0
+    方法二：一边左右翻转，一边修改数字
+
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/flipping-an-image
 
