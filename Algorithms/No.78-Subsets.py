@@ -49,4 +49,4 @@ def subsets(nums):
 if __name__ == '__main__':
     nums = [1, 2, 3]
     result = subsets(nums)
-
+    print(result)
