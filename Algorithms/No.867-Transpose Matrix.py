@@ -27,6 +27,10 @@ No.867：转置矩阵
     1 <= m * n <= 10^5
     -10^9 <= matrix[i][j] <= 10^9
 
+解題思路：
+
+    简单题，重拳出击
+
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/transpose-matrix
 
