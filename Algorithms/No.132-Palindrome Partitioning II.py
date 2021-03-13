@@ -31,7 +31,39 @@ No.132：分割回文串 II
     1 <= s.length <= 2000
     s 仅由小写英文字母组成
 
+解题思路：
+
+
+
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/palindrome-partitioning-ii
 
 """
+
+
+class Solution(object):
+    def minCut(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        N = len(s)
+        dp = [N] * N
+        for i in range(N):
+            if self.isPalindrome(s[0: i + 1]):
+                dp[i] = 0
+                continue
+            for j in range(i):
+                if self.isPalindrome(s[j + 1: i + 1]):
+                    dp[i] = min(dp[i], dp[j] + 1)
+        return dp[N - 1]
+
+    def isPalindrome(self, s):
+        return s == s[::-1]
+
+
+if __name__ == '__main__':
+    s = "aab"
+    solution = Solution()
+    result = solution.minCut(s)
+    print(result)
