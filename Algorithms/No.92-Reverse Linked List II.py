@@ -28,12 +28,21 @@ No.92：反转链表 II
 
 解题思路：
 
-
+    翻转指定区间的链表，需要以下指针：
+        指向 left 左边元素的指针 pre ，它表示未翻转的链表，需要把当前要翻转的链表结点放到 pre 之后。
+        cur 指向当前要翻转的链表结点。
+        nxt 指向 cur.next ，表示下一个要被翻转的链表结点。
+        tail 指向已经翻转的链表的结尾，用它来把已翻转的链表和剩余链表进行拼接。
+    另外用到了链表题常用技巧：哑节点 dummy。
+    创建 哑节点 作为 链表 的新开头，返回结果是这个节点的下一个位置。
+    目的是：如果要翻转的区间包含了原始链表的第一个位置，那么使用 dummy 就可以维护整个翻转的过程更加通用。
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/reverse-linked-list-ii
 
 """
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -67,9 +76,22 @@ def reverseBetween(head, left, right):
 
 
 if __name__ == '__main__':
-    head = ListNode(1)
-    head.next = 2
-    left = 1
-    right = 1
-    result = reverseBetween(head, left, right)
-    print(result.val)
+    # 1 -> 2 -> 3 -> 4 -> 5
+    listNode = ListNode(1)
+    ListNode_2 = ListNode(2)
+    ListNode_3 = ListNode(3)
+    ListNode_4 = ListNode(4)
+    ListNode_5 = ListNode(5)
+
+    listNode.next = ListNode_2
+    ListNode_2.next = ListNode_3
+    ListNode_3.next = ListNode_4
+    ListNode_4.next = ListNode_5
+
+    left = 2
+    right = 4
+    result = reverseBetween(listNode, left, right)
+
+    while result is not None:
+        print(result.val)
+        result = result.next
